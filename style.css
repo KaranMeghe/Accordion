@@ -21,7 +21,7 @@ h1{
 /* Sets the width for the accordion. Sets the margin to 90px on the top and bottom and auto to the left and right */
 
 .accordion-body{
-    /* height: 100vh; */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,4 +93,25 @@ h1{
   .accordion .container.active .label::before {
     content: '-';
     font-size: 30px;
+  }
+
+  /* media queries for mobile devices */
+  @media (max-width: 600px) {
+    .accordion {
+      width: 100%;
+      padding: 45px 10px;
+    }
+
+    .accordion .container.active .content {
+      height: 130px;
+    }
+
+    .accordion .content{
+      font-size: 16px;
+    }
+    
+    .accordion .label {
+      font-size: 20px;
+    }
+
   }
