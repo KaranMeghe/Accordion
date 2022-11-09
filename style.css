@@ -1,3 +1,81 @@
 /* Font family */
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-/* font-family: 'Raleway', sans-serif; */
+
+/* Global reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+     background-color: #0A2344;;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* Sets the width for the accordion. Sets the margin to 90px on the top and bottom and auto to the left and right */
+
+.accordion-body{
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion {
+    width: 800px;
+    margin: 110px auto;
+    color: #000;
+    background-color: #fff;
+    padding: 45px 45px;
+  }
+
+  .accordion .container{
+    position: relative;
+    margin: 10px 10px;
+  }
+
+  /* Positions the labels relative to the .container. Adds padding to the top and bottom and increases font size. Also makes its cursor a pointer */
+
+.accordion .label {
+    position: relative;
+    padding: 10px 0;
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+  }
+
+  /* Positions the plus sign 5px from the right. Centers it using the transform property. */
+  .accordion .label::before{
+    content: '+';
+    color: #000;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 30px;
+    transform: translateY(-50%);
+  }
+
+  /* Hides the content (height: 0), decreases font size, justifies text and adds transition */
+
+  .accordion .content{
+    position: relative;
+    background-color: #fff;
+    height: 0;
+    overflow-y: hidden;
+    transition: 0.5s;
+    font-size: 20px;
+    text-align: justify;
+  }
+
+  /* Adds a horizontal line between the contents */
+
+.accordion hr {
+    width: 100;
+    margin-left: 0;
+    border: 1px solid #555;
+  }
